@@ -27,7 +27,7 @@ class Data_Entropy:
 
 
 
-# 全局变量
+
 class cg_Global():
     def __init__(self) -> None:
         self.model = NAN
@@ -544,7 +544,6 @@ def Is_Break(Global_entropy, train_D):
     curr_model = Global_entropy.model_list[-1]
     before_pred = before_model.predict(train_D.x)
     curr_pred = curr_model.predict(train_D.x)
-    # 比较auc值？
     b_value = AUC(train_D.y, before_pred)
     c_value = AUC(train_D.y, curr_pred)
     print("===before:{}".format(b_value))
